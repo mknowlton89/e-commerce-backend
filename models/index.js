@@ -20,7 +20,7 @@ Product.belongsToMany(Tag, {
     model: ProductTag,
     unique: false
   },
-as: 'product_tag_connection'
+  as: 'product_to_tag'
 });
 
 // Tags belongToMany Products (through ProductTag)
@@ -29,7 +29,7 @@ Tag.belongsToMany(Product, {
     model: ProductTag,
     unique: false
   },
-as: 'product_tag_connection'
+  as: 'tag_to_product'
 });
 
 module.exports = {
